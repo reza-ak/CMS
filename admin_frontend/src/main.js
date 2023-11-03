@@ -1,5 +1,5 @@
 // import css file
-import './assets/main.css'
+import './assets/main.scss'
 
 // import bootstrap
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
