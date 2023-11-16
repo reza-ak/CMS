@@ -1,0 +1,137 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// ====================== colors
+$background: #f4f6f9;
+$grayText: #7f7f7f;
+
+// ====================== fonts
+@font-face {
+  font-family: vazir;
+  src: url("@/assets/fonts/Vazir.ttf");
+}
+
+// ====================== General
+body {
+  overflow: hidden;
+  font-family: vazir;
+}
+.font-s {
+  font-size: 13px;
+}
+.font-m {
+  font-size: 14px;
+}
+
+// ====================== App.vue
+#main {
+  margin-right: 250px;
+  padding: 16px;
+  transition: margin-right 0.5s;
+  background-color: $background;
+  font-family: vazir;
+  height: calc(100vh - 67px);
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 107, 107, 0.2) $background;
+}
+
+// ====================== Header.vue
+header {
+  font-family: vazir;
+}
+// -------navbar
+.navbar {
+  margin-right: 250px;
+  transition: margin-right 0.5s;
+  position: fixed;
+  z-index: 1000;
+  height: 67px;
+}
+.dropdown-menu-email {
+  display: flex;
+  width: 350px;
+}
+.dropdown-menu-profile{
+  margin-top: 13px !important;
+  li:active{
+    color:black !important;
+    background-color: $light;
+  }
+}
+// -------aside
+.aside {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.menu-icon {
+  font-size: 18px;
+  color: $grayText;
+}
+.logo {
+  width: 100%;
+  height: 67px;
+  svg {
+    width: 67px;
+  }
+}
+.logo h6 {
+  font-weight: bold;
+  display: inline-block;
+}
+.logo svg path {
+  fill: #0794d8;
+}
+.menu {
+  scrollbar-width: thin;
+  scrollbar-color: white white;
+  position: absolute;
+  padding-top: 15px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 67px);
+  transition: width 0.5s;
+  svg {
+    width: 67px;
+  }
+  .homeIcon path {
+    fill: $purple;
+  }
+  .blogIcon path {
+    fill: $orange;
+  }
+  .pageIcon path {
+    stroke: $teal;
+  }
+  .commentIcon path {
+    stroke: $info;
+  }
+  .templateIcon path {
+    stroke: $red;
+  }
+  .usersIcon path {
+    fill: $yellow;
+  }
+  .settingIcon path {
+    fill: $green;
+  }
+}
+.menu:hover {
+  scrollbar-color: #e4e4e4 white;
+}
+.menu a {
+  color: $secondary;
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: $black;
+}
