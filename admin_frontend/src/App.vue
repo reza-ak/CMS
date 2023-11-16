@@ -2,7 +2,7 @@
 import { ref, watch } from "vue";
 
 // ====================== Components
-import Header from "./components/layouts/header/Index.vue";
+import Header from "./components/layouts/header/Header.vue";
 
 // ====================== Store
 import { useHeaderStore } from "./store/header";
