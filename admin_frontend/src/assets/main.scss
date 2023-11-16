@@ -22,18 +22,23 @@ body {
 .font-m {
   font-size: 14px;
 }
+.font-l {
+  font-size: 15px;
+}
 
 // ====================== App.vue
 #main {
   margin-right: 250px;
-  padding: 16px;
   transition: margin-right 0.5s;
   background-color: $background;
   font-family: vazir;
   height: calc(100vh - 67px);
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(107, 107, 107, 0.2) $background;
+  scrollbar-color: rgba(107, 107, 107, 0.2) rgba(107, 107, 107, 0);
+}
+section {
+  min-height: calc(100vh - 134px);
 }
 
 // ====================== Header.vue
@@ -52,10 +57,10 @@ header {
   display: flex;
   width: 350px;
 }
-.dropdown-menu-profile{
+.dropdown-menu-profile {
   margin-top: 13px !important;
-  li:active{
-    color:black !important;
+  li:active {
+    color: black !important;
     background-color: $light;
   }
 }
@@ -134,4 +139,10 @@ header {
 }
 .menu a:hover {
   color: $black;
+}
+
+// ====================== Footer.vue
+footer {
+  font-family: vazir;
+  height: 67px;
 }

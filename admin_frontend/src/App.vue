@@ -3,6 +3,7 @@ import { ref, watch } from "vue";
 
 // ====================== Components
 import Header from "./components/layouts/header/Header.vue";
+import Footer from "./components/layouts/footer/Footer.vue";
 
 // ====================== Store
 import { useHeaderStore } from "./store/header";
@@ -19,15 +20,18 @@ watch(headerStore, () => {
     // close main
     main.value.style.marginRight = "67px";
   }
-})
+});
 </script>
 
 <template>
   <!-- header -->
   <Header />
-  
-  <!-- main -->
-  <section dir="rtl" ref="main" id="main">
 
-  </section>
+  <div class="" dir="rtl" ref="main" id="main">
+    <!-- main -->
+    <section class="p-2"></section>
+
+    <!-- footer -->
+    <Footer />
+  </div>
 </template>
