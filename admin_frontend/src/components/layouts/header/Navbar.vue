@@ -69,6 +69,15 @@ function toggleAsideHeader() {
         <div class="dropdown ps-3">
           <span role="button" data-bs-toggle="dropdown">
             <MessageIcon />
+
+            <!-- Unread message number -->
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger p-1"
+            >
+              2
+              <span class="visually-hidden">unread messages</span>
+            </span>
+            
           </span>
           <div class="dropdown-menu dropdown-menu-email mt-4 p-0 border-0">
             <div class="list-group rounded-0">
