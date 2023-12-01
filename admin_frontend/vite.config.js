@@ -12,5 +12,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+
+  // This config is to enable the host(network) to connect and display on the mobile device when run "npm run dev"
+  server: {
+    host: true
   }
 })
