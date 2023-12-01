@@ -1,9 +1,11 @@
+// ====================== bootstrap
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
 // ====================== colors
 $background: #f4f6f9;
 $grayText: #7f7f7f;
+$blue: #0794d8;
 
 // ====================== fonts
 @font-face {
@@ -13,9 +15,9 @@ $grayText: #7f7f7f;
 
 // ====================== General
 body {
-  overflow: hidden;
   font-family: vazir;
 }
+// -------font
 .font-s {
   font-size: 13px;
 }
@@ -25,17 +27,24 @@ body {
 .font-l {
   font-size: 15px;
 }
+// -------color
+.text-blue {
+  color: $blue;
+}
 
 // ====================== App.vue
 #main {
-  margin-right: 250px;
-  transition: margin-right 0.5s;
+  width: calc(100vw - 250px);
+  transition: width 0.5s;
   background-color: $background;
   font-family: vazir;
-  height: calc(100vh - 67px);
-  overflow-y: auto;
+  height: 100vh;
+  padding-top: 67px;
+  overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: rgba(107, 107, 107, 0.2) rgba(107, 107, 107, 0);
+  position: relative;
+  z-index: -1;
 }
 section {
   min-height: calc(100vh - 134px);
@@ -54,7 +63,6 @@ header {
   height: 67px;
 }
 .dropdown-menu-email {
-  display: flex;
   width: 350px;
 }
 .dropdown-menu-profile {
@@ -89,9 +97,6 @@ header {
 .logo h6 {
   font-weight: bold;
   display: inline-block;
-}
-.logo svg path {
-  fill: #0794d8;
 }
 .menu {
   scrollbar-width: thin;
@@ -145,4 +150,6 @@ header {
 footer {
   font-family: vazir;
   height: 67px;
+  line-height: 30px;
+  font-size: 15px;
 }

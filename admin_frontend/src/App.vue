@@ -15,10 +15,10 @@ watch(headerStore, () => {
   const statusHeader = headerStore.statusHeader;
   if (statusHeader) {
     // open main
-    main.value.style.marginRight = "250px";
+    main.value.style.width = window.innerWidth - 250+"px";
   } else {
     // close main
-    main.value.style.marginRight = "67px";
+    main.value.style.width = window.innerWidth - 67+"px";
   }
 });
 </script>
@@ -27,9 +27,11 @@ watch(headerStore, () => {
   <!-- header -->
   <Header />
 
-  <div class="" dir="rtl" ref="main" id="main">
+  <div dir="rtl" ref="main" id="main">
     <!-- main -->
-    <section class="p-2"></section>
+    <section class="p-2">
+      <router-view></router-view>
+    </section>
 
     <!-- footer -->
     <Footer />

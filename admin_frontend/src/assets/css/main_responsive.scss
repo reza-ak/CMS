@@ -1,0 +1,22 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// ====================== responsive layout(header - section - footer)
+@include media-breakpoint-down(lg) {
+  .navbar {
+    margin-right: 0px;
+  }
+  .aside {
+    width: 0px;
+  }
+  #main {
+    width: 100vw;
+  }
+  .dropdown-menu-email {
+    right: -62px !important;
+  }
+  footer {
+    font-size: 13px;
+  }
+}

@@ -1,5 +1,6 @@
 // sass
-import './assets/main.scss'
+import './assets/css/main.scss'
+import './assets/css/main_responsive.scss'
 
 // bootstrap
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'

@@ -11,10 +11,13 @@ import TemplateIcon from "@/components/icons/Template.vue";
 import UsersIcon from "@/components/icons/Users.vue";
 import SettingIcon from "@/components/icons/Setting.vue";
 import DownIcon from "@/components/icons/Down.vue";
+import CloseMenuIcon from "@/components/icons/CloseMenu.vue";
 
 // ====================== Store
 import { useHeaderStore } from "@/store/header";
+import { useHeaderResponsiveStore } from "@/store/headerResponsive";
 const headerStore = useHeaderStore();
+const headerResponsiveStore = useHeaderResponsiveStore();
 
 // Open and close aside header (click event)
 const asideHeader = ref(null);
@@ -47,6 +50,22 @@ function closeAsideHeader() {
     asideHeader.value.style.width = "67px";
   }
 }
+
+// Open and close aside header (responsive mode)
+watch(headerResponsiveStore, () => {
+  openMenu.value = headerResponsiveStore.statusHeader;
+  if (headerResponsiveStore.statusHeader) {
+    // Open aside header
+    asideHeader.value.style.width = "250px";
+  } else {
+    // Close aside header
+    asideHeader.value.style.width = "0px";
+  }
+});
+
+function closeAsideHeaderResponsive() {
+  headerResponsiveStore.changeHeader();
+}
 </script>
 
 <template>
@@ -56,16 +75,30 @@ function closeAsideHeader() {
     ref="asideHeader"
     class="aside bg-white border-start overflow-hidden"
   >
-    <div
-      class="logo text-nowrap py-3"
-      :class="{ 'border-bottom': openMenu }"
-    >
-      <DashboardIcon />
-      <h6 class="m-0 text-dark pe-1">پنل مدیریت</h6>
+    <div class="logo text-nowrap py-3" :class="{ 'border-bottom': openMenu }">
+      <div class="d-inline text-blue">
+        <DashboardIcon />
+      </div>
+      <h6 class="m-0 text-dark pe-1 ps-4">پنل مدیریت</h6>
+      <div
+        class="d-inline d-lg-none text-secondary"
+        role="button"
+        @click="closeAsideHeaderResponsive()"
+      >
+        <CloseMenuIcon v-if="openMenu" />
+      </div>
     </div>
 
     <div class="menu text-nowrap text-muted pt-4">
       <ul class="list-inline p-0">
+        <li class="pt-2 pb-3 px-4 d-block d-lg-none">
+          <input
+            type="search"
+            class="form-control shadow-none"
+            placeholder="جستوجو..."
+          />
+        </li>
+
         <li class="pt-2" role="button">
           <a href="#">
             <HomeIcon />
