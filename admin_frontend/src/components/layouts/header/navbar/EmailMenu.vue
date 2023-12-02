@@ -1,6 +1,8 @@
 <script setup>
 // ====================== icons
 import MessageIcon from "@/components/icons/Message.vue";
+import EmailIcon from "@/components/icons/Email.vue";
+import ArrowLeftIcon from "@/components/icons/ArrowLeft.vue";
 </script>
 
 <template>
@@ -20,10 +22,18 @@ import MessageIcon from "@/components/icons/Message.vue";
       <div
         class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start dropdown-menu-email mt-4 p-0 border-0"
       >
-        <div class="list-group rounded-0">
-          <div
+        <div class="list-group rounded-0 border">
+          <li class="py-1">
+            <h6 class="dropdown-header text-center text-dark">
+              <EmailIcon />
+              <span class="pe-2">پیام ها</span>
+            </h6>
+          </li>
+          <li><hr class="text-secondary m-0" /></li>
+
+          <li
             role="button"
-            class="list-group-item list-group-item-action row m-0 p-3 d-flex"
+            class="dropdown-item list-group-item-action row m-0 p-3 d-flex"
           >
             <div class="col-3 p-0 ps-3">
               <img
@@ -50,10 +60,13 @@ import MessageIcon from "@/components/icons/Message.vue";
                 </p>
               </div>
             </div>
-          </div>
-          <div
+          </li>
+
+          <li><hr class="text-secondary m-0" /></li>
+
+          <li
             role="button"
-            class="list-group-item list-group-item-action row m-0 p-3 d-flex"
+            class="dropdown-item list-group-item-action row m-0 p-3 d-flex"
           >
             <div class="col-3 p-0 ps-3">
               <img
@@ -80,7 +93,16 @@ import MessageIcon from "@/components/icons/Message.vue";
                 </p>
               </div>
             </div>
-          </div>
+          </li>
+
+          <li><hr class="text-secondary m-0" /></li>
+          
+          <li class="py-2" role="button">
+            <h6 class="dropdown-header text-center text-primary">
+              نمایش همه پیام ها
+              <ArrowLeftIcon />
+            </h6>
+          </li>
         </div>
       </div>
     </div>
