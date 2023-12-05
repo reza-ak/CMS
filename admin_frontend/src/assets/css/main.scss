@@ -31,6 +31,9 @@ body {
 .text-blue {
   color: $blue;
 }
+.text-light-green {
+  color: limegreen;
+}
 
 // ====================== App.vue
 #main {
@@ -40,11 +43,9 @@ body {
   font-family: vazir;
   height: 100vh;
   padding-top: 67px;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(107, 107, 107, 0.2) rgba(107, 107, 107, 0);
-  position: relative;
-  z-index: -1;
 }
 section {
   min-height: calc(100vh - 134px);
@@ -104,7 +105,7 @@ header {
   position: absolute;
   padding-top: 15px;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   height: calc(100vh - 67px);
   transition: width 0.5s;
@@ -152,4 +153,40 @@ footer {
   height: 67px;
   line-height: 30px;
   font-size: 15px;
+}
+
+// ====================== home.vue (page)
+// -------tooltip
+span.tip path {
+  color: #c5c5c5;
+}
+span.tip:hover {
+  cursor: help;
+  position: relative;
+}
+span.tip span {
+  display: none;
+}
+span.tip:hover span {
+  display: block;
+  background: white;
+  left: 5px;
+  margin: 10px;
+  width: 200px;
+  position: absolute;
+  z-index: 1001;
+  top: 5px;
+  font-size: 13px;
+  line-height: 25px;
+}
+// -------DateTime (component)
+.timeBox span:nth-child(odd) {
+  width: 50px;
+}
+.timeBox {
+  font-weight: bold;
+  background: -webkit-linear-gradient(top left, $danger, $yellow, $success);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
