@@ -2,6 +2,7 @@
 // ====================== components
 import DateTime from "@/components/pages/home/DateTime.vue";
 import NumberUsers from "@/components/pages/home/NumberUsers.vue";
+import NumberOrders from "@/components/pages/home/NumberOrders.vue";
 </script>
 
 <template>
@@ -12,6 +13,9 @@ import NumberUsers from "@/components/pages/home/NumberUsers.vue";
 
       <!-- number of users -->
       <NumberUsers />
+
+      <!-- number of orders -->
+      <NumberOrders />
     </div>
   </article>
 
