@@ -16,17 +16,17 @@ function numberUsersPeriod() {
 </script>
 
 <template>
-  <div class="col-12 col-md-6 col-lg-3 pb-3 pb-lg-0">
+  <div class="col-12 col-md-6 col-xxl-3 pb-3 pb-xxl-0">
     <div class="border bg-white p-3">
       <div class="card-body text-secondary">
         <div class="d-flex justify-content-between align-items-center pb-5">
-          <div class="col-7">
+          <div class="col-8 col-sm-9 col-md-8 col-xxl-7">
             <h3 class="card-title h6">
               <NumberUsersIcon />
               <span class="pe-2">تعداد کاربران</span>
             </h3>
           </div>
-          <div class="col-5">
+          <div class="col-4 col-sm-3 col-md-4 col-xxl-5">
             <select
               v-model="numberUsers"
               dir="ltr"
