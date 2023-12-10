@@ -18,7 +18,7 @@ setInterval(() => {
 </script>
 
 <template>
-  <div class="col-12 col-md-6 col-lg-3 pb-3 pb-lg-0">
+  <div class="col-12 col-md-6 col-xxl-3 pb-3 pb-xxl-0">
     <div
       class="border bg-white d-flex justify-content-center align-items-center h-100 py-4"
     >
