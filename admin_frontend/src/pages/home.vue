@@ -4,11 +4,12 @@ import DateTime from "@/components/pages/home/DateTime.vue";
 import NumberUsers from "@/components/pages/home/NumberUsers.vue";
 import NumberOrders from "@/components/pages/home/NumberOrders.vue";
 import NumberComments from "@/components/pages/home/NumberComments.vue";
+import TodoList from "@/components/pages/home/TodoList/TodoList.vue";
 </script>
 
 <template>
   <article>
-    <div class="row m-0 d-flex justify-content-between py-2 py-lg-3">
+    <div class="row m-0 mt-2 mt-lg-3">
       <!-- date and time -->
       <DateTime />
 
@@ -23,5 +24,9 @@ import NumberComments from "@/components/pages/home/NumberComments.vue";
     </div>
   </article>
 
-  <article>todo list</article>
+  <article>
+    <div class="row m-0 mb-2 my-lg-4">
+      <TodoList />
+    </div>
+  </article>
 </template>

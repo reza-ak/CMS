@@ -1,6 +1,5 @@
 // ====================== bootstrap
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // ====================== colors
 $background: #f4f6f9;
@@ -31,8 +30,19 @@ body {
 .text-blue {
   color: $blue;
 }
+.text-light-blue {
+  color: #00acc1;
+}
+.bg-light-blue {
+  background-color: #00acc1 !important;
+  color: white !important;
+}
 .text-light-green {
   color: limegreen;
+}
+// -------text
+.text-justify {
+  text-align: justify;
 }
 
 // ====================== App.vue
@@ -54,13 +64,13 @@ section {
 // ====================== Header.vue
 header {
   font-family: vazir;
+  z-index: 1000;
 }
 // -------navbar
 .navbar {
   margin-right: 250px;
   transition: margin-right 0.5s;
   position: fixed;
-  z-index: 1000;
   height: 67px;
 }
 .dropdown-menu-email {
@@ -189,4 +199,41 @@ span.tip:hover span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+// -------TodoList (component)
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
+}
+// ------- Todo form
+.add-task-form {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  textarea {
+    resize: none;
+  }
+  // ------- datetime picker
+  .vpd-icon-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .vpd-input-group {
+    height: 38px;
+  }
+  option{
+    color: $grayText !important;
+  }
+}
+.activeAddTaskForm {
+  height: 270px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+// ------- Todo filters
+.todoFilters {
+  height: 0px;
+  transition: height 0.5s;
+}
+.activeTodoFilters {
+  height: 190px;
 }
